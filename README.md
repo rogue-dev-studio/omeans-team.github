@@ -98,7 +98,7 @@
 
 <p align="center">
   <a href="https://github.com/omeans-team">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=omeans-team&theme=radical&border=E47909&background=0D1117" alt="Saif's GitHub streak"/>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=omeans-team&theme=radical&border=E47909&background=0D1117" alt="Omeans Team"/>
   </a>
 </p>
 
