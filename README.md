@@ -22,7 +22,7 @@
  <a href="https://omeans-team.github.io" target="blank">
   <img src="https://img.shields.io/badge/Website-DC143C?style=for-the-badge&logo=medium&logoColor=white" alt="omeans-team" />
  </a>
- <a href="https://linkedin.com/in/aris.hadisopiyan" target="_blank">
+ <a href="https://linkedin.com/in/arishadisopiyan" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="omeans-team"/>
  </a>
  <!-- <a href="https://dev.to/omeans-team" target="_blank">
