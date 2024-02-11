@@ -1,0 +1,28 @@
+---
+layout: post
+permalink: /categories/CSS/
+title: Categories
+---
+<!-- <div class="col-md-8"> -->
+
+  {% for post in site.categories['CSS'] %}
+  <!-- <div style="border: 3px solid;"> -->
+    <!-- <article class="post"> -->
+      {% unless forloop.last %}<hr>{% endunless %}
+      {% unless forloop.first %}<hr>{% endunless %}
+      <h1>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h1>
+      <div>
+        <p class="post_date">{{ post.date | date: "%B %e, %Y" }}{% if post.author %} • <a href="https://omeans-team.github.io">{{ post.author }}</a>{% endif %}</p>
+      </div>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+          Read More
+      </a>
+    <!-- </article> -->
+  <!-- </div> -->
+  {% endfor %}
+<!-- </div> -->

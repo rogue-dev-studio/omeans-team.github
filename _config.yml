@@ -42,6 +42,13 @@ defaults:
     sectionid: blog
 
 - scope:
+    path: "_categories"
+    type: categories
+  values:
+    layout: "categories"
+    sectionid: categories
+    
+- scope:
     path: _docs
     type: docs
   values:
@@ -50,10 +57,16 @@ defaults:
     seo:
       type: "WebPage"
 
+
+
+
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
   posts:
-    permalink: /blog/:year/:month/:day/:title/:categories
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
+  categories:
+    permalink: /:categories/:path/
     output: true
