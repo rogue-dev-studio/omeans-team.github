@@ -83,10 +83,10 @@
 <br/>
 
 ## Top Open Source -
-[![iTasks](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=itasks&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/omeans-team/itasks)
-[![urFolio](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=urfolio&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/omeans-team/urfolio)
-[![Web Projects](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=web-projects&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/omeans-team/web-projects)
-[![Omeans Team Readme](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=omeans-team&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/omeans-team/omeans-team)
+[![Amazing Animations Loading Block](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=omeans-color-loading-animation-of-nine-blocks&border_color=E47909&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=E47909)](https://github.com/omeans-team/omeans-color-loading-animation-of-nine-blocks)
+[![Chat GPT With PhpMysql](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=ChatGptPhpMySql&border_color=E47909&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=E47909)](https://github.com/omeans-team/ChatGptPhpMySql)
+[![3D Models Web Views](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=Arishadisopiyan3DModelsView&border_color=E47909&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=E47909)](https://github.com/omeans-team/Arishadisopiyan3DModelsView)
+[![Omeans Team Readme](https://github-readme-stats.vercel.app/api/pin/?username=omeans-team&repo=omeans-team&border_color=E47909&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=E47909)](https://github.com/omeans-team/omeans-team)
 
 <p align="left">
   <a href="https://github.com/omeans-team?tab=repositories" target="_blank"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-2962FF?style=for-the-badge&logo=koding&logoColor=white"/></a>
@@ -98,7 +98,7 @@
 
 <p align="center">
   <a href="https://github.com/omeans-team">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=omeans-team&theme=radical&border=7F3FBF&background=0D1117" alt="Saif's GitHub streak"/>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=omeans-team&theme=radical&border=E47909&background=0D1117" alt="Saif's GitHub streak"/>
   </a>
 </p>
 
@@ -109,10 +109,10 @@
 </p>
 
 <a> 
-    <a href="https://github.com/omeans-team"><img alt="Omeans Team's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api?username=omeans-team&show_icons=true&count_private=true&theme=react&border_color=7F3FBF&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
-  <a href="https://github.com/omeans-team"><img alt="Omeans Team's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=omeans-team&langs_count=8&layout=compact&theme=react&border_color=7F3FBF&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
+    <a href="https://github.com/omeans-team"><img alt="Omeans Team's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api?username=omeans-team&show_icons=true&count_private=true&theme=react&border_color=E47909&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
+  <a href="https://github.com/omeans-team"><img alt="Omeans Team's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=omeans-team&langs_count=8&layout=compact&theme=react&border_color=E47909&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
   <br/>
 </a>
 
 
-![Omeans Team's Graph](https://github-readme-activity-graph.vercel.app/graph?username=omeans-team&custom_title=Omeans%20Team's%20GitHub%20Activity%20Graph&bg_color=0D1117&color=7F3FBF&line=7F3FBF&point=7F3FBF&area_color=FFFFFF&title_color=FFFFFF&area=true)
+![Omeans Team's Graph](https://github-readme-activity-graph.vercel.app/graph?username=omeans-team&custom_title=Omeans%20Team's%20GitHub%20Activity%20Graph&bg_color=0D1117&color=E47909&line=E47909&point=E47909&area_color=FFFFFF&title_color=FFFFFF&area=true)
