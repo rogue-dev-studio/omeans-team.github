@@ -1,23 +1,85 @@
 ---
-layout: page
+layout: categories
 permalink: /categories/html/
 title: Categories
 ---
 
-<!-- ['HTML'] sensitive case -->
+<span class="search-query-text text-gradient-purple-coral">HTML</span>
+</h1>
+
+
+</div>
+</section>
+{% assign i = 0 %}
+{% for post in site.categories['HTML'] %}
+  {% assign i = i | plus: 1 %}
+{% endfor %}
+<!-- {{ i }} -->
 <div class="container">
   {% for post in site.categories['HTML'] %}
-    <article class="post col-md-4">
-      <h4>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h4>
-        <p class="blog-post-meta">{{ post.date | date: "%B %e, %Y" }}</p>
-          {{ post.excerpt }}
-      <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-          Read More
-      </a>
-      <p>{{ category_name }}</p>
-    </article>
+    <div class="post col-md-4">
+      <div class="card mb-4 box-shadow">
+        <!-- title -->
+      <!-- {{ site.categories['CSS'] | size }}
+      {{ site.categories | size }}
+      {{ post.categories | size }} -->
+      <hr>
+      <div class="card-header">
+          <h4 class="my-0 font-weight-normal"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+        </div>
+        <small class="text-muted">
+          {{ post.date | date: "%B %e, %Y" }}{% if post.author %} • <a class="author-style" href="https://omeans-team.github.io">{{ post.author }}</a>{% endif %}
+        </small>
+        <!-- title -->
+        <!-- image -->
+        {% assign foundImage = 0 %}
+        {% assign images = post.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+
+              {% if foundImage == 0 %}
+                  {% assign html = image | split:"/>" | first %}
+                  <img {{ html }} />
+                  {% assign foundImage = 1 %}
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% unless foundImage == 1 %}
+          <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18d9db246f7%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18d9db246f7%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.70000076293945%22%20y%3D%22120.18000011444092%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+        {% endunless %}
+        <!-- image -->
+        
+        <div class="card-body">
+          <p class="card-text">
+            {{ post.content | strip_html | truncatewords: 15 }}
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+                Read More
+            </a>
+          </p>
+          <div class="d-flex justify-content-between align-items-center categories-tag">
+              <!-- tag -->
+              {% if post %}
+                {% assign categories = post.categories %}
+              {% else %}
+                {% assign categories = page.categories %}
+              {% endif %}
+              
+              {% for category in categories %}
+                <a href="{{site.baseurl}}/categories/{{category|slugize}}">
+                  <div style="background-color: #616161;display: inline-flex;padding:0 5px;border-radius: .5em;"><p class="fa fa-pencil"></p></div>
+                  <div style="background-color: aqua;display: inline-flex;padding:0 5px;border-radius: .5em;margin: 0 -5px;border-top-left-radius: 0em;border-bottom-left-radius: 0em;"><p>{{category}}</p></div>
+                </a>
+              {% unless forloop.last %}&nbsp;{% endunless %}
+              {% endfor %}
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
   {% endfor %}
+  
+  
+{% if i == 0 %}
+<h4 class="col-md-12">Sorry, but nothing matched your search categories. Please try again with some different categories.</h4>
+{% endif %}
 </div>

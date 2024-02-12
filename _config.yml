@@ -50,6 +50,12 @@ defaults:
     sectionid: docs
     seo:
       type: "WebPage"
+- scope:
+    path: ""
+    type: categories
+  values:
+    layout: categories
+    sectionid: categories
 
 collections:
   docs:

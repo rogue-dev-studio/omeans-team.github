@@ -1,0 +1,53 @@
+---
+layout: page
+permalink: /categories/css/
+title: Categories
+---
+
+<div class="container">
+  {% for post in site.categories['CSS'] %}
+    <article class="post col-md-4">
+      <h4>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h4>
+      
+        <p class="blog-post-meta">{{ post.date | date: "%B %e, %Y" }}</p>
+        
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+
+            {% if foundImage == 0 %}
+                {% assign html = image | split:"/>" | first %}
+                <img {{ html }} />
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% unless foundImage == 1 %}
+      <img class="img-thumbnail" style="width: 100%; height: 157.483px;"/>
+      {% endunless %}
+      {{ post.content | strip_html | truncatewords: 15 }}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+          Read More
+      </a>
+
+      <!-- tag -->
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+
+      {% for category in categories[0] %}
+      <br>
+      {% endfor %}
+      {% for category in categories %}
+      <a class="btn btn-default" href="{{site.baseurl}}/categories/{{category|slugize}}" role="button">{{category}}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+
+    </article>
+  {% endfor %}
+</div>

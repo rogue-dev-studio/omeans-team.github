@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Loading animation nine block"
-date:   2024-02-10 09:41:09
-author: Omeans
+title:  "Basic animation nine block"
+date:   2024-02-12 09:41:09
+author: Aris Hadisopiyan
 # categories: Personal
 # categories: [Tech, Personal]
 categories: [CSS, HTML, Animation]

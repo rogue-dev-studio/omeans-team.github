@@ -6,9 +6,48 @@
 .post p img,
 .post p a img{
   width: 100% !important;
+  height: 225px !important;
+  max-height: 225px !important;
 }
-
-
+.categories-tag a{
+  color: #333;
+  background-color: #616161;
+  display: -webkit-inline-box;
+  border-radius: .5em;
+  font-size: x-small;
+  cursor: pointer;
+}
+.categories-tag a:hover{
+  text-decoration: none !important;
+  color: #333 !important;
+}
+.categories-tag a p{
+  margin: 0 !important;
+}
+.search-query-title {
+  font-weight: 800 !important;
+  font-size: 48px !important;
+  line-height: 52px !important;
+  letter-spacing: -0.03em !important;
+  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-feature-settings: "ss02" on,"ss01" on;
+}
+.search-query-text {
+  font-size: 110% !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+.text-gradient-purple-coral {
+  background: -webkit-linear-gradient(-70deg, #8250df 0%, #d42a32 100%);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(0,0,0,0);
+  -webkit-box-decoration-break: clone;
+}
+.author-style{
+  font-weight: 600;
+}
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
 @import url($web-font-path);
 

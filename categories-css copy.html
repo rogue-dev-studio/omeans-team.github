@@ -1,0 +1,55 @@
+---
+layout: page
+permalink: /categories/css/
+title: Categories
+---
+
+<div class="container">
+  {% for post in site.categories['CSS'] %}
+    <div class="post col-md-4">
+      <h4>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h4>
+      
+        <p class="blog-post-meta">{{ post.date | date: "%B %e, %Y" }}</p>
+        
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+
+            {% if foundImage == 0 %}
+                {% assign html = image | split:"/>" | first %}
+                <img {{ html }} />
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% unless foundImage == 1 %}
+      <img class="img-thumbnail" style="width: 100%; height: 157.483px;" data-src="holder.js/{{ post.title }}" data-holder-rendered="true" alt="{{ post.title }}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QgJFhU2y4WvZgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAaSURBVDjLY2AYBaQgAABgABKqz9QAAAABJRU5ErkJggg=="/>
+
+      <!-- <img class="img-thumbnail" style="width: 100%; height: 157.483px;" data-src="holder.js" data-holder-rendered="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QgJFhU2y4WvZgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAaSURBVDjLY2AYBaQgAABgABKqz9QAAAABJRU5ErkJggg==" alt="{{ post.title }}" /> -->
+      {% endunless %}
+      {{ post.content | strip_html | truncatewords: 15 }}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+          Read More
+      </a>
+
+      <!-- tag -->
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+
+      {% for category in categories[0] %}
+      <br>
+      {% endfor %}
+      {% for category in categories %}
+      <a class="btn btn-default" href="{{site.baseurl}}/categories/{{category|slugize}}" role="button">{{category}}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+
+    </div>
+  {% endfor %}
+</div>
