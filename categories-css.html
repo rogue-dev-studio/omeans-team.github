@@ -1,28 +1,45 @@
 ---
-layout: post
-permalink: /categories/CSS/
+layout: page
+permalink: /categories/css/
 title: Categories
 ---
-<!-- <div class="col-md-8"> -->
 
+<div class="container">
   {% for post in site.categories['CSS'] %}
-  <!-- <div style="border: 3px solid;"> -->
-    <!-- <article class="post"> -->
-      {% unless forloop.last %}<hr>{% endunless %}
-      {% unless forloop.first %}<hr>{% endunless %}
-      <h1>
+    <article class="post col-md-4">
+
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+
+            {% if foundImage == 0 %}
+                {% assign html = image | split:"/>" | first %}
+                <img {{ html }} />
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+      <h4>
+          <!-- <a href="{{ post.permalink }}">{{ post.title }}</a> -->
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
-      <div>
-        <p class="post_date">{{ post.date | date: "%B %e, %Y" }}{% if post.author %} • <a href="https://omeans-team.github.io">{{ post.author }}</a>{% endif %}</p>
-      </div>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+      </h4>
+      <!-- <div> -->
+        <p class="blog-post-meta">{{ post.date | date: "%B %e, %Y" }}</p>
+      <!-- </div> -->
+      <!-- <div class="entry"> -->
+          {{ post.excerpt | img }}
+        <!-- {% highlight ruby %}
+          {{ post.excerpt }}
+        {% endhighlight %} -->
+        <!-- {{ post.excerpt | strip_html }} -->
+        <!-- {{ post.excerpt | strip_html | truncatewords: 50 }} -->
+      <!-- </div> -->
+      <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
           Read More
       </a>
-    <!-- </article> -->
-  <!-- </div> -->
+      <p>{{ category_name }}</p>
+    </article>
   {% endfor %}
-<!-- </div> -->
+</div>

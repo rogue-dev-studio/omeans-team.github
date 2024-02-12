@@ -34,6 +34,7 @@ exclude:
   - vendor
 timezone: Europe/Berlin
 defaults:
+# scope untuk membaca folder untuk dibuild ke public
 - scope:
     path: _posts
     type: posts
@@ -41,13 +42,6 @@ defaults:
     layout: post
     sectionid: blog
 
-- scope:
-    path: "_categories"
-    type: categories
-  values:
-    layout: "categories"
-    sectionid: categories
-    
 - scope:
     path: _docs
     type: docs
@@ -57,16 +51,10 @@ defaults:
     seo:
       type: "WebPage"
 
-
-
-
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
   posts:
-    permalink: /blog/:year/:month/:day/:title/
-    output: true
-  categories:
-    permalink: /:categories/:path/
+    permalink: /blog/:year/:month/:day/:title/:categories
     output: true

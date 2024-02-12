@@ -1,28 +1,23 @@
 ---
-layout: post
-permalink: /categories/HTML/
+layout: page
+permalink: /categories/html/
 title: Categories
 ---
-<!-- <div class="col-md-8"> -->
 
+<!-- ['HTML'] sensitive case -->
+<div class="container">
   {% for post in site.categories['HTML'] %}
-  <!-- <div style="border: 3px solid;"> -->
-    <!-- <article class="post"> -->
-      {% unless forloop.last %}<hr>{% endunless %}
-      {% unless forloop.first %}<hr>{% endunless %}
-      <h1>
+    <article class="post col-md-4">
+      <h4>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
-      <div>
-        <p class="post_date">{{ post.date | date: "%B %e, %Y" }}{% if post.author %} • <a href="https://omeans-team.github.io">{{ post.author }}</a>{% endif %}</p>
-      </div>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+      </h4>
+        <p class="blog-post-meta">{{ post.date | date: "%B %e, %Y" }}</p>
+          {{ post.excerpt }}
+      <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
           Read More
       </a>
-    <!-- </article> -->
-  <!-- </div> -->
+      <p>{{ category_name }}</p>
+    </article>
   {% endfor %}
-<!-- </div> -->
+</div>
