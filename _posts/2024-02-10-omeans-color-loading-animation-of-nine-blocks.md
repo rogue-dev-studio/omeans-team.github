@@ -5,7 +5,7 @@ date:   2024-02-10 09:41:09
 author: Omeans
 # categories: Personal
 # categories: [Tech, Personal]
-categories: [CSS, HTML, Animation]
+categories: [css, html, animation]
 ---
 
 [![Watch the video](https://raw.githubusercontent.com/omeans-team/img/main/previ.png)](https://youtu.be/de0j_FO4vwE){:target="_blank"} 
