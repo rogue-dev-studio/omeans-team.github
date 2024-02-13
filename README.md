@@ -40,6 +40,14 @@
 </p>
 <br />
 
+
+
+ # Any Question or request?
+ click link ![here](https://github.com/omeans-team/omeans-team.github.io/issues/new)<br>
+ input title and description <br>
+ select labels question or request<br>
+![image](https://github.com/omeans-team/omeans-team.github.io/assets/47584746/f4252a4a-9d7e-449b-9ada-74d01c7deaff)
+
  # Requirement of this system
  
 <!-- About Section -->
