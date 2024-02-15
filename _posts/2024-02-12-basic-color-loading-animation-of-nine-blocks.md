@@ -6,7 +6,7 @@ author: Aris Hadisopiyan
 categories: [css,html,animation]
 ---
 
-[![Watch the video](https://raw.githubusercontent.com/omeans-team/public_assets/master/assets/img/prev.png)](https://youtu.be/de0j_FO4vwE){:target="_blank"} 
+[![Watch the video](https://raw.githubusercontent.com/omeans-team/public_assets/master/assets/img/project/other/animasi_loading/prev.png)](https://youtu.be/de0j_FO4vwE){:target="_blank"} 
 
 It is ideal for Open Source projects to publish under [Repository](https://github.com/omeans-team/omeans-color-loading-animation-of-nine-blocks){:target="_blank"} . [Check Demo](https://youtu.be/de0j_FO4vwE){:target="_blank"}
 
