@@ -8,9 +8,9 @@ author: Omeans
 categories: [css, html, animation]
 ---
 
-[![Watch the video](https://raw.githubusercontent.com/omeans-team/img/main/previ.png)](https://youtu.be/de0j_FO4vwE){:target="_blank"} 
+[![Watch the video](https://raw.githubusercontent.com/omeans-team/public_assets/master/assets/img/previ.png)](https://youtu.be/Phjy6K7Lazs){:target="_blank"} 
 
-It is ideal for Open Source projects to publish under [Repository](https://github.com/omeans-team/omeans-color-loading-animation-of-nine-blocks){:target="_blank"} . [Check Demo](https://youtu.be/de0j_FO4vwE){:target="_blank"}
+It is ideal for Open Source projects to publish under [Repository](https://github.com/omeans-team/omeans-color-loading-animation-of-nine-blocks){:target="_blank"} . [Check Demo](https://youtu.be/Phjy6K7Lazs){:target="_blank"}
 
 <!-- tag -->
 <!-- {% for post in site.categories.Personal %}
