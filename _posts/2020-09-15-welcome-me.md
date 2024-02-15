@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome Me"
 date:   2020-09-15 15:14:00
 author: Aris Hadisopiyan
-categories: [readme, welcome]
+categories: [readme,welcome]
 ---
 <!--
 <a href="https://raw.githubusercontent.com/omeans-team/omeans-team/master/license.txt"><img src="https://img.shields.io/github/license/jaid/action-npm-install?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/omeans-team"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor omeans-team"/></a>  

@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Basic animation nine block"
-date:   2024-02-12 09:41:09
+date:   2024-02-12 09:00:00
 author: Aris Hadisopiyan
-# categories: Personal
-# categories: [Tech, Personal]
-categories: [css, html, animation]
+categories: [css,html,animation]
 ---
 
 [![Watch the video](https://raw.githubusercontent.com/omeans-team/public_assets/master/assets/img/prev.png)](https://youtu.be/de0j_FO4vwE){:target="_blank"} 

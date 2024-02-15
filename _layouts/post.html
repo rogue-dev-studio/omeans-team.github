@@ -15,43 +15,19 @@ layout: default
                     <li><a href="{{ "/allposts" | relative_url }}">All posts ...</a></li>
                 </ul>
                 <h4>Categories</h4>
-                <ul class="list-unstyled post-list-container">
-                    <!-- {% if post %} -->
-                      {% assign categories = post.categories %}
-                    <!-- {% else %}
-                      {% assign categories = page.categories %}
-                    {% endif %} -->
-                    {% for category in categories %}
-                    <a href="{{site.baseurl}}/categories/{{category|slugize}}">{{category}}</a>
-                    {% unless forloop.last %}&nbsp;{% endunless %}
-                    {% endfor %}
-                    
-                    {% assign all_categories = "" %}
-                    {% for post in site.posts limit:10 %}
-                      {% assign all_categories = alls_categories %}
-                    {% endfor %}
-                    {% for category in alls_categories %}
-                      <a>{{ category }}</a>
-                      {% unless forloop.last %}&nbsp;{% endunless %}
-                    {% endfor %}
+                <ul class="list-unstyled post-list-container" style="line-height: 2.5;">
 
-                    {% for post in site.posts limit:10 %}
+
+                    {% for post in site.posts limit:50 %}
                       {% assign all_categories = all_categories | append: post.categories | join: "," %}
                     {% endfor %}
                     
-                    {% assign unique_categories = all_categories | split: "," | uniq %}
+                    {% assign unique_categories = all_categories | split: ']' | remove:' ' | remove:'"' | remove:'[' | remove: ']' | remove:'\' | split: ',' | uniq %}
                     
-                      {% for category in unique_categories %}
-                        <a>{{ category }}</a>
-                        {% unless forloop.last %}&nbsp;{% endunless %}
-                      {% endfor %}
-                    
-
-                    {% for post in site.posts limit:10 %}
-                    <li><a >{{ category }}</a></li>
+                    {% for category in unique_categories %}
+                      <a class="badge" style="text-transform: uppercase; background-color: #e47909;padding: 8px 12px 8px;" href="{{site.baseurl}}/categories/{{category|slugize}}">{{ category }}</a>
+                      {% unless forloop.last %}&nbsp;{% endunless %}
                     {% endfor %}
-
-                    <li><a href="{{ "/allposts" | relative_url }}">All posts ...</a></li>
                 </ul>
             </div>
         </div>

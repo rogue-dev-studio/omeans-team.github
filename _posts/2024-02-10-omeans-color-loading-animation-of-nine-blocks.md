@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Loading animation nine block"
-date:   2024-02-10 09:41:09
+date:   2024-02-10 09:00:00
 author: Omeans
-# categories: Personal
-# categories: [Tech, Personal]
-categories: [css, html, animation]
+categories: [css,html,animation]
 ---
 
 [![Watch the video](https://raw.githubusercontent.com/omeans-team/public_assets/master/assets/img/previ.png)](https://youtu.be/Phjy6K7Lazs){:target="_blank"} 
