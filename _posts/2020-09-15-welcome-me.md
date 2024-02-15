@@ -17,9 +17,9 @@ This is usually needed to prepare for other steps in a GitHub Actions workflow.
 
 <!-- Intro  -->
 <h3 align="center">
-        <samp>&gt; Hey There!, I am
-                <b><a target="_blank" href="https://omeans-team.github.io">Omeans Team</a></b>
-        </samp>
+    <samp>&gt; Hey There!, I am
+            <b><a target="_blank" href="https://omeans-team.github.io">Omeans Team</a></b>
+    </samp>
 </h3>
 
 
@@ -33,7 +33,7 @@ This is usually needed to prepare for other steps in a GitHub Actions workflow.
   </samp>
 </p>
 
-<p align="center">
+<p align="center" style="display: block ruby;">
  <a href="https://omeans-team.github.io" target="blank">
   <img src="https://img.shields.io/badge/Website-DC143C?style=for-the-badge&logo=medium&logoColor=white" alt="omeans-team" />
  </a>
