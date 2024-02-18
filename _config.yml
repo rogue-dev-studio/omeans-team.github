@@ -1,12 +1,15 @@
 # Site settings
 title: Omeans Team
+author: Aris Hadisopiyan
+logo: 
 first_name: Omeans
 middle_name:
 last_name: Team
 email: aris.hadisopiyan@gmail.com
 description: >
-  Website portfolio milik Aris Hadisopiyan.
+  Portfolio Aris Hadisopiyan.
 lang: en-US
+keywords: [Omeans Team, omeans-team, omeans_team, arishadisopiyan, aris-hadisopiyan, aris_hadisopiyan]
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: https://omeans-team.github.io # the base hostname & protocol for your site
@@ -66,3 +69,23 @@ collections:
   posts:
     permalink: /blog/:year/:month/:day/:title/:categories
     output: true
+
+# twitter: 
+#   username: rogertheracoon
+
+# facebook:
+#   app_id: 987654321
+#   publisher: 987654321   
+#   admins: 987654321
+
+social:
+  name: Roger the Racoon
+  links:
+    - https://twitter.com/rogertheracoon
+    - https://www.instagram/rogerracoon
+    - https://www.facebook.com/roger.racoon
+
+  webmaster_verifications:
+    google: 987654321
+    bing: 987654321
+    alexa: 987654321
