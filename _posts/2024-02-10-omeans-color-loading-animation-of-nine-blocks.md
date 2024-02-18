@@ -23,7 +23,10 @@ It is ideal for Open Source projects to publish under [Repository](https://githu
     {% assign categories = page.categories %}
   {% endif %}
   {% for category in categories %}
-  <a href="{{site.baseurl}}/categories/{{category|slugize}}">{{category}}</a>
+  <!-- <a href="{{site.baseurl}}/categories/{{category|slugize}}">{{category}}</a> -->
+  <a href="{{site.baseurl}}/categories/{{category|slugize}}">
+ <img src="https://img.shields.io/badge/{{category}}-{% if category == "css" %}{{ site.categories.css | size }}{% elsif category == "html" %}{{ site.categories.html | size }}{% elsif category == "animation" %}{{ site.categories.animation | size }}{% else %}{{ 0 }}{% endif %}-blue?logo={% if category == "css" %}{{ "css3" }}{% elsif category == "html" %}{{ "html5" }}{% elsif category == "animation" %}{{ "animation" }}{% else %}{{ "" }}{% endif %}&logoColor=white"/>
+  </a>
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %}
 </div>

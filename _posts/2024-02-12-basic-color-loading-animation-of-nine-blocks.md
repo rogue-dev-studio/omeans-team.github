@@ -15,7 +15,10 @@ It is ideal for Open Source projects to publish under [Repository](https://githu
  <li><a href="{{ post.url }}">{{ post.categories }}</a></li>
 {% endfor %} -->
 
- 
+ <!-- <img src="https://img.shields.io/badge/any%20text-you%20like-blue?logo=medium&logoColor=white" alt="omeans-team" />
+ <img src="https://img.shields.io/badge/any%20text-you%20like-blue?logo=linkedin&logoColor=white" alt="omeans-team" />
+ <img src="https://img.shields.io/badge/%20-you%20like-blue?logo=linkedin&logoColor=white" alt="omeans-team" />
+ <img src="https://img.shields.io/badge/any%20text-you%20like-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="omeans-team" /> -->
 <div class="post-categories">
   {% if post %}
     {% assign categories = post.categories %}
@@ -23,7 +26,21 @@ It is ideal for Open Source projects to publish under [Repository](https://githu
     {% assign categories = page.categories %}
   {% endif %}
   {% for category in categories %}
-  <a href="{{site.baseurl}}/categories/{{category|slugize}}">{{category}}</a>
+  <a href="{{site.baseurl}}/categories/{{category|slugize}}">
+ <img src="https://img.shields.io/badge/{{category}}-{% if category == "css" %}{{ site.categories.css | size }}{% elsif category == "html" %}{{ site.categories.html | size }}{% elsif category == "animation" %}{{ site.categories.animation | size }}{% else %}{{ 0 }}{% endif %}-blue?logo={% if category == "css" %}{{ "css3" }}{% elsif category == "html" %}{{ "html5" }}{% elsif category == "animation" %}{{ "animation" }}{% else %}{{ "" }}{% endif %}&logoColor=white"/>
+  </a>
+  <!-- <a href="{{site.baseurl}}/categories/{{category|slugize}}">{{category}}</a> -->
+  <!-- <a href="{{site.baseurl}}/categories/{{category|slugize}}">{{category}}
+    {% if category == "css" %}
+      ({{ site.categories.css | size }})
+    {% elsif category == "html" %}
+      ({{ site.categories.html | size }})
+    {% else %}
+      ({{ 0 }})
+    {% endif %}
+  </a> -->
+  <!-- ({{ site.categories.animation | size }}) -->
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %}
+  
 </div>
