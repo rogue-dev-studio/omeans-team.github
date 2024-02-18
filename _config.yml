@@ -1,9 +1,11 @@
 # Site settings
 title: Omeans Team
+first_name: Omeans
+middle_name:
+last_name: Team
 email: aris.hadisopiyan@gmail.com
 description: >
-  Omeans Team adalah sebuah website portfolio yang dibuat oleh Aris Hadisopiyan.
-  Website ini menampilkan karya-karya Aris sebagai seorang desainer dan pengembang web yang mencakup desain grafis, desain UI/UX, serta pengembangan website.
+  Website portfolio milik Aris Hadisopiyan.
 lang: en-US
 
 baseurl: "" # the subpath of your site, e.g. /blog/
