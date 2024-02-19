@@ -47,6 +47,7 @@
       url: https://www.youtube.com/channel/UCc-wxj8LR7n83Y_-6fGwnKA
 - title: Other Portfolio
   source-files: external
+  target: _blank
   url: https://omeans-team.github.io/omeansteam.github.io/portfolio.html
 - title-dropdown: Uji Coba
   url: /

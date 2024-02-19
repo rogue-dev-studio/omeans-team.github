@@ -29,14 +29,26 @@
                             {% if sublink.title == 'separator' %}
                                 <li role="separator" class="divider"></li>
                             {% else %}
-                                {% if sublink.source-files == 'external' %}
-                                <li>
-                                    <a type="{{ sublink.type }}" href="{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
-                                </li>
-                                {% else %}
+                                {% if sublink.download == '' %}
+                                    {% if sublink.source-files == 'external' %}
                                     <li>
-                                        <a type="{{ sublink.type }}" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
+                                        <a type="{{ sublink.type }}" href="{{ sublink.url }}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
                                     </li>
+                                    {% else %}
+                                        <li>
+                                            <a type="{{ sublink.type }}" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% else %}
+                                    {% if sublink.source-files == 'external' %}
+                                    <li>
+                                        <a type="{{ sublink.type }}" href="{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
+                                    </li>
+                                    {% else %}
+                                        <li>
+                                            <a type="{{ sublink.type }}" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
+                                        </li>
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
