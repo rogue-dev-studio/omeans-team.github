@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/user/018d937d-9efd-4e7c-a4ba-ff2f2235fff9.svg)](https://wakatime.com/@018d937d-9efd-4e7c-a4ba-ff2f2235fff9)
+# [Omeans Team](https://omeansteam.github.io/)
 
 <!-- Intro  -->
 <h3 align="center">
