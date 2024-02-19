@@ -1,0 +1,79 @@
+
+- title: Home
+  url: /
+- title-dropdown: About
+  url: /
+  sublinks:
+    - title: FAQ
+      url: /faq.html
+    - title: Documentation
+      source-files: external
+      url: https://omeans-team.github.io/docs/home/
+    - title: separator
+    - title: Customer Support
+      url: /customer-support.html
+- title-dropdown: Career
+  url: /
+  sublinks:
+    - title: Curriculum Vitae
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/pages/cv
+      id: opener
+    - title: Download CV
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/uploads/pdf/ARIS_HADISOPIYAN-CV-WEB_DEVELOPER.pdf
+      type: application/octet-stream
+      download: ARIS_HADISOPIYAN-CV-WEB_DEVELOPER
+      target: _blank
+    - title: separator
+    - title: Customer Support
+      url: /customer-support.html
+- title-dropdown: Project
+  url: /
+  sublinks:
+    - title: Download Game Suanggi Survival Papua
+      source-files: external
+      url: https://bit.ly/30jlGgw
+      target: _blank
+    - title: Jurnal Suanggi Survival Papua
+      source-files: external
+      url: https://jurnal.unej.ac.id/index.php/INFORMAL/article/view/21235
+    - title: Aplikasi Sistem Informasi Klinik
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/Aplikasi_Sistem_Informasi_Klinik
+    - title: separator
+    - title: Gameplay
+      source-files: external
+      url: https://www.youtube.com/channel/UCc-wxj8LR7n83Y_-6fGwnKA
+- title: Other Portfolio
+  source-files: external
+  url: https://omeans-team.github.io/omeansteam.github.io/portfolio.html
+- title-dropdown: Uji Coba
+  url: /
+  sublinks:
+    - title: Not Found
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/404.html
+      target: _blank
+    - title: Parallax
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/Parallax-Website-mainEdit
+      target: _blank
+    - title: Parallax 2
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/tesssssss
+      target: _blank
+    - title: New
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/new.html
+      target: _blank
+    - title: Theme Custom
+      source-files: external
+      url: https://omeans-team.github.io/omeansteam.github.io/allcssnoimg.html
+      target: _blank
+# - title: Contact
+#   url: /contact.html
+# - title: Store
+#   url: /store.html
+# - title: Support
+#   url: /support.html

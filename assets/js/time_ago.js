@@ -24,7 +24,13 @@ function timeAgo(date) {
     return `${diffInSeconds} seconds ago`;
 }
 
-const element = document.getElementById('date-post').innerHTML;
+const element = document.getElementById('date-post');
 // console.log(timeAgo(element));
 
-document.getElementById('date-post-ago').innerHTML = '<i class="fa fa-clock-o"></i> ' + timeAgo(element);
+if (element) {
+    const content = element.innerHTML;
+    document.getElementById('date-post-ago').innerHTML = '<i class="fa fa-clock-o"></i> ' + timeAgo(content);   
+    // console.log('Isi dari elemen date-post:', content);
+} else {
+    // console.log('Elemen dengan ID "date-post" tidak ada.');
+}

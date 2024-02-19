@@ -1,78 +1,59 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container navbar-container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">
-                <span><img src="{{ "/assets/img/logonav.png" | relative_url }}" alt="Logo" style="border-radius: 50%;"></span> {{ site.title }}
-            </a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav mr-auto">
-                <li {% if page.sectionid=='docs' %} class="active" {% endif %}><a href="{{ "/docs/home/" | relative_url }}">Docs</a></li>
-                <li {% if page.sectionid=='blog' %} class="active" {% endif %}><a href="{{ site.posts.first.url | relative_url }}">Post</a></li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Career
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <div class="dropdown-menu c-3" aria-labelledby="navbarDropdown">
-                    <!-- <a class="dropdown-item" id="dialog_cv" target="_blank" href="pages/cv">Curriculum Vitae</a> -->
-                    <!-- <a style="cursor: pointer;" class="dropdown-item" id="opener" target="pages/cv">Curriculum Vitae</a> -->
-                    <!-- <a class="dropdown-item" id="" target="_blank" href="pages/cv/dialog.html">Contoh dialog</a> -->
-                    <!-- <a class="dropdown-item" href="#">Biography</a> -->
-                    <div class="dropdown-divider"></div>
-                    <!-- <a class="dropdown-item" href="pages/cv"
-                        target="_blank">Download CV</a> -->
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/uploads/pdf/ARIS_HADISOPIYAN-CV-WEB_DEVELOPER.pdf" target="_blank"
-                        type="application/octet-stream" download="ARIS_HADISOPIYAN-CV-WEB_DEVELOPER">Download CV</a>
-                    </div>
-                </li>
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Project
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <div class="dropdown-menu c-3" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://bit.ly/30jlGgw" target="_blank" title="Size: 744 MB">Download Game
-                        Suanggi Survival Papua</a>
-                    <a class="dropdown-item" href="https://jurnal.unej.ac.id/index.php/INFORMAL/article/view/21235"
-                        target="_blank">Jurnal Suanggi Survival Papua</a>
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/Aplikasi_Sistem_Informasi_Klinik" target="_blank">Aplikasi Sistem Informasi
-                        Klinik</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="https://www.youtube.com/channel/UCc-wxj8LR7n83Y_-6fGwnKA"
-                        target="_blank">Gameplay</a>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="https://omeans-team.github.io/omeansteam.github.io/portfolio.html" target="_blank">Other Portfolio</a>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Uji Coba
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <div class="dropdown-menu c-3" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/404.html" target="_blank" title="Page Not Found">Not Found</a>
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/Parallax-Website-mainEdit" target="_blank">Parallax</a>
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/tesssssss" target="_blank">Parallax 2</a>
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/new.html" target="_blank">New</a>
-                    <a class="dropdown-item" href="https://omeans-team.github.io/omeansteam.github.io/allcssnoimg.html" target="_blank">AllCSS</a>
-                    </div>
-                </li>
-            </ul>
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbarSupportedContent">    
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
+        </button>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <span><img src="{{ "/assets/img/logonav.png" | relative_url }}" alt="Logo" style="border-radius: 50%;"></span> {{ site.title }}
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbarSupportedContent">
+        <ul class="nav navbar-nav navbar-right">
+            {% assign links = site.data.navigation %}
+            {% for link in links %}
+                {% assign class = nil %}
+                {% if page.url contains link.url %}
+                    {% assign class = 'active' %}
+                {% endif %}
+                {% if link.sublinks %}
+                    <!-- <li class="nav-item {{ class }}">
+                        <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ link.title-dropdown }}<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        {% for sublink in link.sublinks %}
+                            {% if sublink.title == 'separator' %}
+                                <li role="separator" class="divider"></li>
+                            {% else %}
+                                {% if sublink.source-files == 'external' %}
+                                <li>
+                                    <a type="{{ sublink.type }}" href="{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
+                                </li>
+                                {% else %}
+                                    <li>
+                                        <a type="{{ sublink.type }}" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </li>
+                    {% else %}
+                        {% if link.source-files == 'external' %}
+                        <li class="nav-item {{ class }}">
+                            <a class="nav-link" href="{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a>
+                        </li>
+                        {% else %}
+                        <li class="{{ class }}">
+                            <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                        {% endif %}
+                {% endif %}
+            {% endfor %}
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
                     <div class="form-group has-feedback">
@@ -84,6 +65,7 @@
                     <li><a href="{{ site.git_address }}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-        </div>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
