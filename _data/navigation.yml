@@ -7,8 +7,9 @@
     - title: FAQ
       url: /faq.html
     - title: Documentation
-      source-files: external
-      url: https://omeans-team.github.io/docs/home/
+      url: /docs/home/
+    - title: Post
+      url: /allposts
     - title: separator
     - title: Customer Support
       url: /customer-support.html

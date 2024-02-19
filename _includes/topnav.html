@@ -35,7 +35,7 @@
                     </li>
                 {% else %}
                     <li class="nav-item {{ class }}">
-                        <a class="nav-link" href="{% if link.source-files == 'external' %}{{ link.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ link.url }}{% endif %}"  {% if sublink.target %}target="{{sublink.target}}"{% endif %} >{{ link.title }} <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% if link.source-files == 'external' %}{{ link.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ link.url }}{% endif %}"  {% if link.target %}target="{{link.target}}"{% endif %} >{{ link.title }} <span class="sr-only">(current)</span></a>
                     </li>
                 {% endif %}
             {% endfor %}
