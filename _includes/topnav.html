@@ -19,9 +19,6 @@
                     {% assign class = 'active' %}
                 {% endif %}
                 {% if link.sublinks %}
-                    <!-- <li class="nav-item {{ class }}">
-                        <a class="nav-link" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a>
-                    </li> -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ link.title-dropdown }}<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -29,41 +26,17 @@
                             {% if sublink.title == 'separator' %}
                                 <li role="separator" class="divider"></li>
                             {% else %}
-                                {% if sublink.download == '' %}
-                                    {% if sublink.source-files == 'external' %}
-                                    <li>
-                                        <a type="{{ sublink.type }}" href="{{ sublink.url }}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
-                                    </li>
-                                    {% else %}
-                                        <li>
-                                            <a type="{{ sublink.type }}" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
-                                        </li>
-                                    {% endif %}
-                                {% else %}
-                                    {% if sublink.source-files == 'external' %}
-                                    <li>
-                                        <a type="{{ sublink.type }}" href="{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
-                                    </li>
-                                    {% else %}
-                                        <li>
-                                            <a type="{{ sublink.type }}" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" download="{{sublink.download}}" target="{{sublink.target}}" id="{{sublink.id}}">{{ sublink.title }}</a>
-                                        </li>
-                                    {% endif %}
-                                {% endif %}
+                                <li>
+                                    <a {% if sublink.type %}type="{{ sublink.type }}"{% endif %} href="{% if sublink.source-files == 'external' %}{{ sublink.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ sublink.url }}{% endif %}" {% if sublink.download %}download="{{sublink.download}}"{% endif %}  {% if sublink.target %}target="{{sublink.target}}"{% endif %} {% if sublink.id %}id="{{sublink.id}}"{% endif %}>{{ sublink.title }}</a>
+                                </li>
                             {% endif %}
                         {% endfor %}
                         </ul>
                     </li>
-                    {% else %}
-                        {% if link.source-files == 'external' %}
-                        <li class="nav-item {{ class }}">
-                            <a class="nav-link" href="{{ link.url }}">{{ link.title }} <span class="sr-only">(current)</span></a>
-                        </li>
-                        {% else %}
-                        <li class="{{ class }}">
-                            <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
-                        </li>
-                        {% endif %}
+                {% else %}
+                    <li class="nav-item {{ class }}">
+                        <a class="nav-link" href="{% if link.source-files == 'external' %}{{ link.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ link.url }}{% endif %}"  {% if sublink.target %}target="{{sublink.target}}"{% endif %} >{{ link.title }} <span class="sr-only">(current)</span></a>
+                    </li>
                 {% endif %}
             {% endfor %}
             <div class="navbar-right">
