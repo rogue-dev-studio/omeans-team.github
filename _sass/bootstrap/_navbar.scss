@@ -660,3 +660,11 @@
     }
   }
 }
+
+.navbar-zero-top {
+  top: 0;
+  border-width: 0 0 1px;
+  position: absolute;
+  right: 0;
+  left: 0;
+}

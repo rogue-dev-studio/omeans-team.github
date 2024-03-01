@@ -1,4 +1,8 @@
+{% if page.halaman == 'base' %}
+<nav class="navbar navbar-default navbar-zero-top">
+{% else %}
 <nav class="navbar navbar-default navbar-fixed-top">
+{% endif %}
     <div class="container">
       <div class="navbar-header">
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbarSupportedContent">    
@@ -39,6 +43,9 @@
                     </li>
                 {% endif %}
             {% endfor %}
+
+            {% if page.halaman == 'base' %}
+            {% else %}
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
                     <div class="form-group has-feedback">
@@ -50,6 +57,7 @@
                     <li><a href="{{ site.git_address }}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
+            {% endif %}
         </ul>
       </div>
     </div>

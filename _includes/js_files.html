@@ -1,5 +1,17 @@
 <script>
   var baseurl = '{{ site.baseurl }}'
+//   const onProgress = (event) => {
+//   const progressBar = event.target.querySelector('.progress-bar');
+//   const updatingBar = event.target.querySelector('.update-bar');
+//   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+//   if (event.detail.totalProgress === 1) {
+//     progressBar.classList.add('hide');
+//     event.target.removeEventListener('progress', onProgress);
+//   } else {
+//     progressBar.classList.remove('hide');
+//   }
+// };
+// document.querySelector('model-viewer').addEventListener('progress', onProgress);
 </script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
@@ -8,3 +20,7 @@
 
 <script src="{{ "/assets/js/main.js" | relative_url }} "></script>
 <script src="{{ "/assets/js/time_ago.js" | relative_url }} "></script>
+  
+
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>

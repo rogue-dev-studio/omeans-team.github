@@ -705,3 +705,180 @@ input[type="checkbox"],
     }
   }
 }
+.bg-header{
+  background: url('../img/bg.jpg') no-repeat 50% 0;
+  background-size: cover;
+  background-position: center 36%;
+  margin-top: -37px;
+  background-color: black;
+}
+// .home-page .container {
+//   padding-top: 50px;
+// }
+.home-page .container .col-sm-6 > h1{
+  font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600;
+  font-size: 5rem;
+  text-shadow: 0 1px 20px rgba(255, 255, 255, .5);
+  border: #333;
+}
+.home-page .container .col-sm-6 > p{
+  margin: 8px 0 20px 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 146%;
+  color: rgba(255, 255, 255,.4);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, .5);
+}
+.layout-tips-scroll{
+  position: absolute;
+  top: 90vh;
+}
+.tips-scroll{
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: rgba(255, 43, 43, 0.28);
+  animation: changeColor 6s infinite alternate;
+}
+.fa.fa-arrow-down.arrow-ainmate {
+  animation: bounceUpDown 1s infinite alternate;
+}
+
+@keyframes bounceUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+      color: #CB3770;
+  }
+  20% {
+      color: #F64231;
+  }
+  40% {
+      color: #FD7426;
+  }
+  60% {
+      color: #FEBD33;
+  }
+  80% {
+      color: #FEF251;
+  }
+  100% {
+      color: #7BDB7F;
+  }
+}
+.box-inner{
+  border-radius: 8px;
+  background: rgba(19,20,22,.05);
+  border: 2px solid rgb(252, 117, 38);
+}
+.btn-search-home-page{
+  background: #FD7426;
+  color: #fff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+
+model-viewer {
+  width: 100%;
+  height: 90%;
+  background-color: #ffffff;
+}
+
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10%;
+  max-height: 2%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 25px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.update-bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  float: left;
+  transition: width 0.3s;
+}
+
+#ar-button {
+  background-image: url(https://raw.githubusercontent.com/omeans-team/astronaut-viewer/main/ar_icon.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 16px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+#ar-button:active {
+  background-color: #E8EAED;
+}
+
+#ar-button:focus {
+  outline: none;
+}
+
+#ar-button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
+@keyframes circle {
+  from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
+  to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes elongate {
+  from { transform: translateX(100px); }
+  to   { transform: translateX(-100px); }
+}
+
+model-viewer > #ar-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  animation: elongate 2s infinite ease-in-out alternate;
+  display: none;
+}
+
+model-viewer[ar-status="session-started"] > #ar-prompt {
+  display: block;
+}
+
+model-viewer > #ar-prompt > img {
+  animation: circle 4s linear infinite;
+}

@@ -2,21 +2,65 @@
 layout: default
 keywords: [Omeans Team, omeans-team, omeans_team, arishadisopiyan, aris-hadisopiyan, aris_hadisopiyan]
 description: Portfolio Aris Hadisopiyan
+halaman: base
 ---
 
-<div class="header-container jumbotron">
-    <div class="container">
-        <h1>Omeans Team</h1>
-        <p>Omeans Team adalah sebuah website portfolio yang dibuat oleh Aris Hadisopiyan. 
-            <br>Website ini menampilkan karya-karya Aris yang mencakup desain grafis, desain UI/UX, serta pengembangan website.</p>
-        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | relative_url }}" role="button">Learn more</a></p>
+<div class="bg-header" style="height:100vh;">
+    <div class="header-container home-page">
+        <div class="container">
+            <div class="col-sm-6">
+                <h1>Omeans Team</h1>
+                <p>One-stop website for finding assets/features/projects I produce, including apps/games, 2D/3D, and more.</p>
+                <form class="col-sm-12">
+                    <div class="input-group box-inner">
+                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                        <input id="search-box-2" type="search" class="form-control" placeholder="Enter more keywords to improve search accuracy">
+                        <div class="input-group-addon"><i class="fa fa-camera" title="Search with image cooming soon"></i></div>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-search-home-page" type="button">Search</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                
+                <!-- <model-viewer> HTML element -->
+                <!-- <model-viewer src="https://raw.githubusercontent.com/omeans-team/astronaut-viewer/main/Astronaut.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="https://raw.githubusercontent.com/omeans-team/astronaut-viewer/main/poster.webp" shadow-intensity="1">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                    <div id="ar-prompt">
+                        <img src="https://raw.githubusercontent.com/omeans-team/astronaut-viewer/main/ar_hand_prompt.png">
+                    </div>
+                </model-viewer> -->
+                <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://raw.githubusercontent.com/omeans-team/astronaut-viewer/main/Astronaut.glb" ar  poster="https://raw.githubusercontent.com/omeans-team/astronaut-viewer/main/poster.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            </div>
+        </div>
+        <div class="layout-tips-scroll col-sm-12"><a href="#cari-konten"><div class="tips-scroll"><i class="fa fa-arrow-down arrow-ainmate"></i><span>Scroll down to see around</span></div></a></div>
     </div>
 </div>
+
+<div class="container" id="cari-konten">
+    <form class="col-sm-12">
+        <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+            <input id="search-box-2" type="search" class="form-control" placeholder="Enter more keywords to improve search accuracy">
+            <div class="input-group-addon"><i class="fa fa-camera" title="Search with image cooming soon"></i></div>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Search</button>
+            </span>
+        </div>
+    </form>
+</div>
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h2 class="header-light regular-pad">What is Jekyll?</h2>
+            <h2 class="header-light regular-pad" id="jek">What is Jekyll?</h2>
               <p class="lead">Jekyll is a simple, blog-aware, static site generator. It takes a template
               directory containing raw text files in various formats, runs it through
               a converter (like <a href="https://daringfireball.net/projects/markdown/">Markdown</a>)

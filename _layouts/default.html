@@ -3,7 +3,11 @@
 
 {% include head.html %}
 
+{% if page.halaman == 'base' %}
+<body style="padding-top: 38px !important;">
+{% else %}
 <body>
+{% endif %}
 
     {% include topnav.html %}
 
