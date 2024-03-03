@@ -1,0 +1,103 @@
+
+<script>
+    const gyroscopes = document.querySelectorAll(".star");
+
+    document.addEventListener("mousemove", (event) => {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      gyroscopes.forEach((gyroscope) => {
+        const imageWidth = gyroscope.offsetWidth;
+        const imageHeight = gyroscope.offsetHeight;
+
+        // const translateX = ((mouseX / window.innerWidth) * 100) - 50;
+        // const translateY = ((mouseY / window.innerHeight) * 100) - 50;
+        const translateX = (mouseX / window.innerWidth) * 100 - 50;
+        const translateY = (mouseY / window.innerHeight) * 100 - 50;
+
+        if (gyroscope.style.height == "1px") {
+          gyroscope.style.transform = `translate3d(${translateX}px, ${translateY}px, 0px)`;
+        } else if (gyroscope.style.height == "2px") {
+          gyroscope.style.transform = `translate3d(${translateX * 2}px, ${
+            translateY * 2
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "3px") {
+          gyroscope.style.transform = `translate3d(${translateX * 3}px, ${
+            translateY * 3
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "4px") {
+          gyroscope.style.transform = `translate3d(${translateX * 4}px, ${
+            translateY * 4
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "5px") {
+          gyroscope.style.transform = `translate3d(${translateX * 5}px, ${
+            translateY * 5
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "6px") {
+          gyroscope.style.transform = `translate3d(${translateX * 6}px, ${
+            translateY * 6
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "7px") {
+          gyroscope.style.transform = `translate3d(${translateX * 7}px, ${
+            translateY * 7
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "8px") {
+          gyroscope.style.transform = `translate3d(${translateX * 8}px, ${
+            translateY * 8
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "9px") {
+          gyroscope.style.transform = `translate3d(${translateX * 9}px, ${
+            translateY * 9
+          }px, 0px)`;
+        } else if (gyroscope.style.height == "10px") {
+          gyroscope.style.transform = `translate3d(${translateX * 10}px, ${
+            translateY * 10
+          }px, 0px)`;
+        } else if (!gyroscope.style.height) {
+          gyroscope.style.transform = `translate3d(${translateX * 11}px, ${
+            translateY * 11
+          }px, 0px)`;
+        }
+      });
+    });
+
+    const cursorSmall = document.querySelector(".cursor");
+
+    const cursorElem = (e) => {
+      const mouseY = e.clientY;
+      const mouseX = e.clientX;
+
+      cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    };
+
+    window.addEventListener("mousemove", cursorElem);
+
+    function startBlinking() {
+      const blinkingElement = document.getElementById("blinkingElement");
+      blinkingElement.style.animationPlayState = "running";
+    }
+
+    function stopBlinking() {
+      const blinkingElement = document.getElementById("blinkingElement");
+      blinkingElement.style.animationPlayState = "paused";
+    }
+
+    // Memulai efek kelap-kelip
+    startBlinking();
+
+    // Menghentikan efek kelap-kelip setelah beberapa detik (misalnya 5 detik)
+    // setTimeout(stopBlinking, 5000);
+    function createMeteor() {
+      const meteor = document.createElement("div");
+      meteor.classList.add("meteor");
+      meteor.style.left = `${getRandomPosition()}%`;
+      document.getElementById("meteorContainer").appendChild(meteor);
+    }
+
+    function getRandomPosition() {
+      return Math.random() * 100;
+    }
+
+    // Membuat meteor secara periodik setiap 1 detik
+    setInterval(createMeteor, 1000);
+  </script>
