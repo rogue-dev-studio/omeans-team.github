@@ -1,5 +1,27 @@
 
 <script>
+
+var descriptionBlogElement = document.querySelector('.description-blog');
+  var descriptionBlogHeight = descriptionBlogElement.clientHeight+'px';
+  
+  const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  if (event.detail.totalProgress === 1) {
+    progressBar.classList.add('hide');
+    event.target.removeEventListener('progress', onProgress);
+  } else {
+    progressBar.classList.remove('hide');
+    document.querySelector('model-viewer').style.height = descriptionBlogHeight;
+  }
+};
+document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+
+
+
+
     const gyroscopes = document.querySelectorAll(".star");
 
     document.addEventListener("mousemove", (event) => {
@@ -61,32 +83,7 @@
       });
     });
 
-    const cursorSmall = document.querySelector(".cursor");
 
-    const cursorElem = (e) => {
-      const mouseY = e.clientY;
-      const mouseX = e.clientX;
-
-      cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-    };
-
-    window.addEventListener("mousemove", cursorElem);
-
-    function startBlinking() {
-      const blinkingElement = document.getElementById("blinkingElement");
-      blinkingElement.style.animationPlayState = "running";
-    }
-
-    function stopBlinking() {
-      const blinkingElement = document.getElementById("blinkingElement");
-      blinkingElement.style.animationPlayState = "paused";
-    }
-
-    // Memulai efek kelap-kelip
-    startBlinking();
-
-    // Menghentikan efek kelap-kelip setelah beberapa detik (misalnya 5 detik)
-    // setTimeout(stopBlinking, 5000);
     function createMeteor() {
       const meteor = document.createElement("div");
       meteor.classList.add("meteor");
@@ -101,3 +98,4 @@
     // Membuat meteor secara periodik setiap 1 detik
     setInterval(createMeteor, 1000);
   </script>
+<script src="{{ "/assets/js/input_placeholder.js" | relative_url }} "></script>
