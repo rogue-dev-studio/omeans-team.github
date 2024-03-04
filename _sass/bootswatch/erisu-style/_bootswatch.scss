@@ -711,16 +711,23 @@ input[type="checkbox"],
   // background-position: center 36%;
   // margin-top: -37px;
   background-color: black;
+  height: 95vh; //height utama landing
 }
-// .home-page .container {
-//   padding-top: 50px;
-// }
+.home-page .container {
+  // padding-top: 10%;
+  // margin-top: 25%;
+}
+.home-page .container .col-sm-6 {
+  // padding-top: 50px;
+  height: 100%;
+}
 .home-page .container .col-sm-6 > h1{
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
   font-size: 5rem;
   text-shadow: 0 1px 20px rgba(255, 255, 255, .5);
   border: #333;
+  margin-top: 50%;
 }
 .home-page .container .col-sm-6 > p{
   margin: 8px 0 20px 0;
@@ -732,10 +739,12 @@ input[type="checkbox"],
   text-shadow: 0 1px 3px rgba(255, 255, 255, .5);
 }
 .layout-tips-scroll{
-  // position: absolute;
-  top: 20vh;
+  position: absolute;
+  // top: 80%;
   // bottom: -25vh;
   // bottom: calc(25%)-40px;
+  bottom: 0;
+  width: 100%;
 }
 .tips-scroll{
   text-align: center;
@@ -805,7 +814,7 @@ input.form-control{
 #meteorContainer {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -972,12 +981,13 @@ input.form-control{
   display: table-cell;
   vertical-align: middle;
   position: absolute;
-  top: calc(100vh - 35%);
+  top: 65px;
+  // top: calc(100vh - 35%);
   // transform: translateY(calc(100vh + 200px)) rotate(45deg);
   left: 0px;
   z-index: 10;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 65px);
 }
 
 #background {
