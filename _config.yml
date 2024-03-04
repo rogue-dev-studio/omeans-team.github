@@ -29,8 +29,9 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-gems:
-- jekyll/tagging
+  - jekyll/tagging
+# gems:
+# - jekyll/tagging
 tag_page_layout: tag
 tag_page_dir: blog/tags
 

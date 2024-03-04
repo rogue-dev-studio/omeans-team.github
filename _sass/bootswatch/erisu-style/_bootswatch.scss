@@ -4147,3 +4147,32 @@ html {
   background-color: #55595c;
   border-radius: 20px;
 }
+.daftarkonten{
+  width: 100%;
+  padding: 2.5%;
+}
+.datapost{
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.datapost img{
+  border-radius: 10px 10px 0 0;
+}
+.datapost .card-body{
+  padding: 10px;
+}
+.datapost h6{
+  padding: 10px 0;
+}
+.datapost a{
+  color: #151515;
+  font-weight: 600;
+}
+.datapost a:hover{
+  color: $orange-eris1;
+}
+.lay-post{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
