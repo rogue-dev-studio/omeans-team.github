@@ -29,6 +29,10 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
+gems:
+- jekyll/tagging
+tag_page_layout: tag
+tag_page_dir: blog/tags
 
 exclude:
   - Gemfile
@@ -37,7 +41,8 @@ exclude:
   - .gitignore
   - README.md
   - vendor
-timezone: Europe/Berlin
+timezone: Asia/Jakarta
+#  Europe/Berlin
 defaults:
 # scope untuk membaca folder untuk dibuild ke public
 - scope:

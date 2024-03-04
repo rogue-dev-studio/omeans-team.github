@@ -4045,3 +4045,105 @@ html {
     padding: 1rem;
   }
 }
+/* Slider */
+.slick-slide {
+  margin: 0px 5px;
+  width: 356px !important;
+}
+.slick-track{
+  width: 10000px !important;
+}
+.logo-carousel {
+  overflow: inherit;
+  // border-top: 1px solid #353535;
+  // border-bottom: 1px solid #353535;
+}
+
+.slick-slide img {
+  // width: 100%;
+  height: 100%;
+}
+
+.slick-track::before,
+.slick-track::after {
+  display: table;
+  content: '';
+}
+
+.slick-track::after {
+  clear: both;
+}
+
+.slick-track {
+  padding: 1rem 0;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  // top: 50%;
+  background: url(https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/arrow.svg?sanitize=true) center no-repeat;
+  color: #fff;
+  filter: invert(77%) sepia(32%) saturate(1%) hue-rotate(344deg) brightness(105%) contrast(103%);
+  border: none;
+  width: 120px;
+  height: 100%;
+  text-indent: -10000px;
+  // margin-top: -16px;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  transform: rotate(180deg);
+  border-radius: 10px;
+  top: 0;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  border-radius: 10px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.slider-logo {
+  overflow: hidden;
+  width: 100% !important;
+}  
+.slick-slider{
+  padding: 0 2.25%;
+}
+/* JsFiddle Example only/don't use */
+.mrg-t32 {
+  margin-top: 32px;
+}
+.slide{
+  width: 356px;
+  height: 200px;
+  background-color: #55595c;
+  border-radius: 20px;
+}
