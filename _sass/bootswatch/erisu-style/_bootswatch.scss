@@ -4176,3 +4176,34 @@ html {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.preview-content{
+  width: calc(25% - 20px);
+  float: left;
+  margin: 10px;
+}
+.preview-content-img {
+  display: block;
+  border-radius: 10px;
+  animation-name: loading-image;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; /* Make the animation repeat indefinitely */
+}
+
+@keyframes loading-image {
+  0% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ececec;
+  }
+  75% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+

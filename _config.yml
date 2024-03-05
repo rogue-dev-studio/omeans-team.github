@@ -12,6 +12,7 @@ lang: en-US
 keywords: [Omeans Team, omeans-team, omeans_team, arishadisopiyan, aris-hadisopiyan, aris_hadisopiyan]
 
 baseurl: "" # the subpath of your site, e.g. /blog/
+redirectcontents: /contents/ # the subpath of your site, e.g. /blog/
 url: https://omeans-team.github.io # the base hostname & protocol for your site
 git_address: https://github.com/omeans-team/omeans-team.github.io
 git_edit_address: https://github.com/omeans-team/omeans-team.github.io/blob/gh-pages
@@ -67,6 +68,12 @@ defaults:
   values:
     layout: categories
     sectionid: categories
+- scope:
+    path: _contents
+    type: contents
+  values:
+    layout: contents
+    sectionid: contents
 
 collections:
   docs:
@@ -74,6 +81,9 @@ collections:
     output: true
   posts:
     permalink: /blog/:year/:month/:day/:title/:categories
+    output: true
+  contents:
+    permalink: /contents/:year/:month/:day/:title/
     output: true
 
 # twitter: 

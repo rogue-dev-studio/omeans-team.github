@@ -1,0 +1,64 @@
+{% if page.halaman == 'base' %}
+<nav class="navbar navbar-default navbar-zero-top">
+{% else %}
+<nav class="navbar navbar-default navbar-fixed-top">
+{% endif %}
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbarSupportedContent">    
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
+        </button>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <span><img src="{{ "/assets/img/logonav.png" | relative_url }}" alt="{{ site.title }}" style="border-radius: 50%;"></span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbarSupportedContent">
+        <ul class="nav navbar-nav navbar-right">
+            {% assign links = site.data.navigation %}
+            {% for link in links %}
+                {% assign class = nil %}
+                {% if page.url contains link.url %}
+                    {% assign class = 'active' %}
+                {% endif %}
+                {% if link.sublinks %}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ link.title-dropdown }}<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        {% for sublink in link.sublinks %}
+                            {% if sublink.title == 'separator' %}
+                                <li role="separator" class="divider"></li>
+                            {% else %}
+                                <li>
+                                    <a {% if sublink.type %}type="{{ sublink.type }}"{% endif %} href="{% if sublink.source-files == 'external' %}{{ sublink.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ sublink.url }}{% endif %}" {% if sublink.download %}download="{{sublink.download}}"{% endif %}  {% if sublink.target %}target="{{sublink.target}}"{% endif %} {% if sublink.id %}id="{{sublink.id}}"{% endif %}>{{ sublink.title }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="nav-item {{ class }}">
+                        <a class="nav-link" href="{% if link.source-files == 'external' %}{{ link.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ link.url }}{% endif %}"  {% if link.target %}target="{{link.target}}"{% endif %} >{{ link.title }} <span class="sr-only">(current)</span></a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if page.halaman == 'base' %}
+            {% else %}
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ site.git_address }}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>

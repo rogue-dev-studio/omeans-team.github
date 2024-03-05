@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /categories/
+permalink: /categoriessss/
 title: Categories
 ---
 

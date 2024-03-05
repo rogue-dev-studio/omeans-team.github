@@ -97,5 +97,14 @@ document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
     // Membuat meteor secara periodik setiap 1 detik
     setInterval(createMeteor, 1000);
-  </script>
+    
+    window.addEventListener('scroll', function() {
+        const tipsScroll = document.querySelector('.layout-tips-scroll');
+        const offset = window.innerHeight * 0.5; // -50vh
+
+        if (window.scrollY > offset) {
+            window.location.href = '{{ site.baseurl }}/contents/';
+        }
+    });
+</script>
 <script src="{{ "/assets/js/input_placeholder.js" | relative_url }} "></script>
