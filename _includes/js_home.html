@@ -100,10 +100,12 @@ document.querySelector('model-viewer').addEventListener('progress', onProgress);
     
     window.addEventListener('scroll', function() {
         const tipsScroll = document.querySelector('.layout-tips-scroll');
-        const offset = window.innerHeight * 0.5; // -50vh
+        const offset = window.innerHeight * 0.2; // 20vh dari bawah
 
         if (window.scrollY > offset) {
-            window.location.href = '{{ site.baseurl }}/contents/';
+          setTimeout(function() {
+              window.location.href = '{{ site.baseurl }}/contents/';
+          }, 5000);
         }
     });
 </script>
