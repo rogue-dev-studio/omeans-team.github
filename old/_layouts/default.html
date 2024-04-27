@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+{% if page.halaman == 'base' %}
+<body style="padding-top: 38px !important;">
+{% else %}
+<body>
+{% endif %}
+
+    {% include topnav.html %}
+
+
+    
+    <div class="page-content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </div>
+    <!-- <script src="https://omeans-team.github.io/astronaut-viewer/script.js"></script> -->
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    {% include footer.html %}
+    {% include js_files.html %}
+
+    {% if page.halaman == 'base' %}
+    {% include js_home.html %}
+    {% else %}
+    {% endif %}
+</body>
+
+</html>

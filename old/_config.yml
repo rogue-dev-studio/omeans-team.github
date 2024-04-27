@@ -1,0 +1,107 @@
+# Site settings
+title: Omeans Team
+author: Aris Hadisopiyan
+logo: 
+first_name: Omeans
+middle_name:
+last_name: Team
+email: aris.hadisopiyan@gmail.com
+description: >
+  Situs web terpadu untuk menemukan aset/fitur/proyek yang saya hasilkan, termasuk aplikasi/game, 2D/3D, dan banyak lagi.
+lang: en-US
+keywords: [Omeans Team, omeans-team, omeans_team, arishadisopiyan, aris-hadisopiyan, aris_hadisopiyan]
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+redirectcontents: /contents/ # the subpath of your site, e.g. /blog/
+url: https://omeans-team.github.io # the base hostname & protocol for your site
+git_address: https://github.com/omeans-team/omeans-team.github.io
+git_edit_address: https://github.com/omeans-team/omeans-team.github.io/blob/gh-pages
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: erisu-style # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll/tagging
+# gems:
+# - jekyll/tagging
+tag_page_layout: tag
+tag_page_dir: blog/tags
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+  - vendor
+timezone: Asia/Jakarta
+#  Europe/Berlin
+defaults:
+# scope untuk membaca folder untuk dibuild ke public
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+- scope:
+    path: ""
+    type: categories
+  values:
+    layout: categories
+    sectionid: categories
+- scope:
+    path: _contents
+    type: contents
+  values:
+    layout: contents
+    sectionid: contents
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/:categories
+    output: true
+  contents:
+    permalink: /contents/:year/:month/:day/:title/
+    output: true
+
+# twitter: 
+#   username: rogertheracoon
+
+# facebook:
+#   app_id: 987654321
+#   publisher: 987654321   
+#   admins: 987654321
+
+social:
+  name: Roger the Racoon
+  links:
+    - https://twitter.com/rogertheracoon
+    - https://www.instagram/rogerracoon
+    - https://www.facebook.com/roger.racoon
+
+  webmaster_verifications:
+    google: flliSue9AwQckFdilGQV0b7QVydtNM3Sb9vnzSj705A
+    bing: 987654321
+    alexa: 987654321
